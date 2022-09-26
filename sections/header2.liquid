@@ -1,5 +1,22 @@
 {{ 'section-header2.css' | asset_url | stylesheet_tag }}
 
-<div class="section-header2">
-  Header2
+<div class="header2">
+  <div class="logo">{{ section.settings.logo }}</div>
+  <div class="search"></div>
+  <div class="cart"></div>
 </div>
+
+{% schema %}
+  {
+    "name": "header2",
+    "tag": "section",
+    "class": "header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      }
+    ]
+  }
+{% endschema %}
