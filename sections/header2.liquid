@@ -1,21 +1,40 @@
 {{ 'section-header2.css' | asset_url | stylesheet_tag }}
 
-<div class="header2">
-  <div class="logo">{{ section.settings.logo }}</div>
-  <div class="search"></div>
-  <div class="cart"></div>
+<div class="header2__mobile">
+  mobile
+</div>
+
+<div class="header2__desktop">
+  <div class="logo">{{ section.settings.logo | img_url: 'master' | img_tag }}</div>
+  <div class="search">
+    <form action="{{ routes.search_url }}">
+      <input type="text"
+        value="{{ search.terms | escape }}"
+      >
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>    
+  </div>
+  <div class="cart">
+    <div class="cart__icon">{{ section.settings.cart_logo | img_url: 'master' | img_tag }}</div>
+    <h1 class="cart__total">{{ cart.total_price | money_without_trailing_zeros }}</h1>
+  </div>
 </div>
 
 {% schema %}
   {
     "name": "header2",
-    "tag": "section",
-    "class": "header",
+    "tag": "header",
+    "class": "header2",
     "settings": [
       {
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "cart_logo",
+        "label": "Cart Logo"
       }
     ]
   }
