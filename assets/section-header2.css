@@ -2,6 +2,83 @@
   display: flex;
 }
 
+.header2__mobile > .header2__mobile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.header2__mobile > .header2__mobile-content > .hamburger__icon {
+  font-size: 4rem;
+}
+
+.header2__mobile > .header2__mobile-content > .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header2__mobile > .header2__mobile-content > .cart {
+  display: flex;
+  align-items: center;
+}
+
+.header2__mobile > .header2__mobile-content > .cart > .cart__total {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 0;
+  margin-left: 20px;
+  font-size: revert;
+  color: #a1a1a1;
+}
+
+.header2__mobile > .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #4ccfc1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.header2__mobile > .sidenav > ul.menu > li.menu-link {
+  list-style: none;
+  text-decoration: none;
+  font-family: "BebasNeue";
+  font-size: 2rem;
+  color: white;
+}
+
+.header2__mobile > .sidenav > ul.menu > li.menu-link > a {
+  padding: 0;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.header2__mobile > .sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.header2__mobile > .sidenav > .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
 .header2__desktop {
   display: none;
 }
@@ -33,9 +110,6 @@
   border-right: none;
   width: 100%;
   padding: 5px;
-}
-
-.header2__desktop > .search > form > input:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
