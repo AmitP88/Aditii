@@ -15,15 +15,25 @@
     </div>
 
     <div class="mySlides fade">
-      <div class="text">4</div>
+      <div class="product-image">{{ all_products['cowhide-standard-crew'].featured_image | img_url: 'master' | img_tag }}</div>
+      <div class="product-info">
+        <h1 class="product-info__title">{{ all_products['cowhide-standard-crew'].title }}</h1>
+        <p class="product-info__description">{{ all_products['cowhide-standard-crew'].description }}</p>
+        <a href="{{ all_products['cowhide-standard-crew'].url }}">
+          <button>Shop Now</button>
+        </a>
+      </div>
     </div>
 
     <div class="mySlides fade">
       <div class="text">5</div>
     </div>
 
+    <!---
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+    --->
+
   </div>
   <br>
 
@@ -62,7 +72,12 @@
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
+
+    if (window.innerWidth >= 768) {
+      slides[slideIndex-1].style.display = "flex";  
+    } else {
+      slides[slideIndex-1].style.display = "block";
+    }
     dots[slideIndex-1].className += " active";
   }
 </script>

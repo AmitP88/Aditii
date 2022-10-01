@@ -46,6 +46,8 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  -webkit-box-shadow: inset -1px 0px 4px -3px #000000;
+  box-shadow: inset -1px 0px 4px -3px #000000;
 }
 
 .header2__mobile > .sidenav > ul.menu > li.menu-link {
@@ -54,6 +56,7 @@
   font-family: "BebasNeue";
   font-size: 2rem;
   color: white;
+  letter-spacing: 2px;
 }
 
 .header2__mobile > .sidenav > ul.menu > li.menu-link > a {
@@ -146,13 +149,18 @@
 
 .header2__desktop > .header2__desktop-bottom {
   background-color: #4ccfc1;
-  -moz-box-shadow: 1px 1px 3px rgba(68,68,68,0.2);
+  box-shadow: 0 1px 2px -2px black;
+  position: relative;
+  z-index: 0;
+  /* -moz-box-shadow: 1px 1px 3px rgba(68,68,68,0.2);
 	-webkit-box-shadow: 1px 1px 3px rgba(68,68,68,0.2);
 	box-shadow: 1px 1px 3px rgba(68,68,68,0.2);
 
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-	zoom: 1;
+	zoom: 1; */
+
+
 }
 
 .header2__desktop > .header2__desktop-bottom > ul.menu {
