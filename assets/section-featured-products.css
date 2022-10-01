@@ -1,0 +1,93 @@
+.featured-products > .featured-products__title {
+  color: white;
+  background-color: #3fc1b1;
+  letter-spacing: 1px;
+  font-size: 25px;
+  padding: 2rem 10%;
+  margin: 0;
+}
+
+.featured-products > .featured-products__products {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.featured-products > .featured-products__products > .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 277px;
+  border: 1px solid #e4e4e4;
+  border-bottom: 5px solid #3cc395;
+  /* border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 5px solid #3cc395; */
+  box-shadow: 0px 2px 2px 1px rgba(228,228,228,0.76);
+  -webkit-box-shadow: 0px 2px 2px 1px rgba(228,228,228,0.76);
+  -moz-box-shadow: 0px 2px 2px 1px rgba(228,228,228,0.76);
+  margin-bottom: 5rem;
+}
+
+.featured-products > .featured-products__products > .product > .product__title {
+  color: #a1a1a1;
+  text-align: center;
+  font-size: 26px;
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.featured-products > .featured-products__products > .product > .product__image {
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+.featured-products > .featured-products__products > .product > .product__price-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2% 17% 15% 17%;
+}
+
+.featured-products > .featured-products__products > .product > .product__price-buy > a > button {
+  border: none;
+  border-radius: 5px;
+  background-color: #3cc395;
+  color: white;
+  font-family: 'BebasNeue';
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+}
+
+.featured-products > .featured-products__products > .product > .product__price-buy > .product__price {
+  color: #a1a1a1;
+  font-size: 25px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-products > .featured-products__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+
+  .featured-products > .featured-products__products > .product {
+    margin-bottom: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .featured-products > .featured-products__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

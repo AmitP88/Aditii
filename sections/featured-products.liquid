@@ -1,0 +1,32 @@
+{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}
+
+<div class="featured-products">
+  <h2 class="featured-products__title">Featured Products</h2>
+  <div class="featured-products__products">
+    {% for product in collections['featured-products'].products %}
+      <div class="product">
+        <img class="product__image" src="{{ product.featured_image | img_url: 'master' }}" alt="product_image">
+        <h3 class="product__title">{{ product.title }}</h3>
+        <div class="product__price-buy">
+          <h3 class="product__price">{{ product.price | money_without_trailing_zeros }}</h3>
+          <a href="{{ product.url }}">
+            <button>Buy Now</button>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "featured-products"
+    }
+  ]
+}
+{% endschema %}
