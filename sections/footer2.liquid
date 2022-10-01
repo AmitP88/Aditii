@@ -1,0 +1,132 @@
+{{ 'section-footer2.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer2">
+  <div class="footer2__top">
+    <div class="menu">
+      <h3>{{ linklists.featured-sale.title }}</h3>
+      <ul>
+        {% for link in linklists.featured-sale.links %}
+          <li class="menu-link">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+      
+            {% if link.links.size > 0 %}
+              <ul class="menu dropdown-child">
+                {% for child_link in link.links %}
+                  <li class="menu-link">
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+      
+                    {% if child_link.links.size > 0 %}
+                      <ul class="menu dropdown-grandchild">
+                        {% for grandchild_link in child_link.links %}
+                          <li class="menu-link">
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>      
+    </div>
+
+    <div class="menu">
+      <h3>{{ linklists.mens-store.title }}</h3>
+      <ul>
+        {% for link in linklists.mens-store.links %}
+          <li class="menu-link">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+      
+            {% if link.links.size > 0 %}
+              <ul class="menu dropdown-child">
+                {% for child_link in link.links %}
+                  <li class="menu-link">
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+      
+                    {% if child_link.links.size > 0 %}
+                      <ul class="menu dropdown-grandchild">
+                        {% for grandchild_link in child_link.links %}
+                          <li class="menu-link">
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>      
+    </div>
+
+    <div class="menu">
+      <h3>{{ linklists.women-store.title }}</h3>
+      <ul>
+        {% for link in linklists.women-store.links %}
+          <li class="menu-link">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+      
+            {% if link.links.size > 0 %}
+              <ul class="menu dropdown-child">
+                {% for child_link in link.links %}
+                  <li class="menu-link">
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+      
+                    {% if child_link.links.size > 0 %}
+                      <ul class="menu dropdown-grandchild">
+                        {% for grandchild_link in child_link.links %}
+                          <li class="menu-link">
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>      
+    </div>
+
+    <div class="menu">
+      <h3>{{ linklists.quick-links.title }}</h3>
+      <ul>
+        {% for link in linklists.quick-links.links %}
+          <li class="menu-link">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+      
+            {% if link.links.size > 0 %}
+              <ul class="menu dropdown-child">
+                {% for child_link in link.links %}
+                  <li class="menu-link">
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+      
+                    {% if child_link.links.size > 0 %}
+                      <ul class="menu dropdown-grandchild">
+                        {% for grandchild_link in child_link.links %}
+                          <li class="menu-link">
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>      
+    </div>
+  </div>
+  <div class="footer2__bottom">
+    <p>Copyright &#x24B8; 2013 Css Author</p>
+  </div>
+</footer>
