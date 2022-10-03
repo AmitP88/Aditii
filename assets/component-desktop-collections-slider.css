@@ -1,5 +1,5 @@
-.mobile-collections-slider {
-  background-color: purple;
+.desktop-collections-slider {
+  background-color: cornflowerblue;
   box-shadow: 0 1px 2px -2px black;
   position: relative;
   height: 150px;
@@ -7,19 +7,19 @@
 }
 
 /* Slideshow container */
-.mobile-collections-slider > .mobile__container {
+.desktop-collections-slider > .desktop__container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mobile-slide {
+.desktop-slide {
   display: none;
 }
 
 /* Next & previous buttons */
-.mobile-prev, .mobile-next {
+.desktop-prev, .desktop-next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -35,13 +35,13 @@
 }
 
 /* Position the "next button" to the right */
-.mobile-next {
+.desktop-next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.mobile-prev:hover, .mobile-next:hover {
+.desktop-prev:hover, .desktop-next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
@@ -50,7 +50,7 @@
 }
 
 /* Fading animation */
-.mobile__fade {
+.desktop__fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }

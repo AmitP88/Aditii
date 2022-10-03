@@ -1,0 +1,49 @@
+{{ 'component-desktop-collections-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="desktop-collections-slider">
+  <div class="desktop__container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="desktop-slide desktop__fade">
+      <div class="text">Desktop 1</div>
+    </div>
+  
+    <div class="desktop-slide desktop__fade">
+      <div class="text">Desktop 2</div>
+    </div>
+  
+    <div class="desktop-slide desktop__fade">
+      <div class="text">Desktop 3</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="desktop-prev" onclick="desktopPlusSlides(-1)">&#10094;</a>
+    <a class="desktop-next" onclick="desktopPlusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+<script>
+  let desktopSlideIndex = 1;
+  desktopShowSlides(desktopSlideIndex);
+
+  // Next/previous controls
+  function desktopPlusSlides(n) {
+    desktopShowSlides(desktopSlideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function desktopCurrentSlide(n) {
+    desktopShowSlides(desktopSlideIndex = n);
+  }
+
+  function desktopShowSlides(n) {
+    let i;
+    let desktopSlides = document.getElementsByClassName("desktop-slide");
+    if (n > desktopSlides.length) {desktopSlideIndex = 1}
+    if (n < 1) {desktopSlideIndex = desktopSlides.length}
+    for (i = 0; i < desktopSlides.length; i++) {
+      desktopSlides[i].style.display = "none";
+    }
+    desktopSlides[desktopSlideIndex-1].style.display = "block";
+  }
+</script>
