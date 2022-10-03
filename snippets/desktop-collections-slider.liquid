@@ -2,10 +2,40 @@
 
 <div class="desktop-collections-slider">
   <div class="desktop__container">
-
-    <!-- Full-width images with number and caption text -->
+    <div class="desktop-arrows desktop-prev" onclick="desktopPlusSlides(-1)">.</div>    
     <div class="desktop-slide desktop__fade">
-      <div class="text">Desktop 1</div>
+      <div class="desktop-slide__collection">
+        {% assign collection_1 = collections['branded-shoes'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="desktop-slide__collection">
+        {% assign collection_1 = collections['branded-tshirts'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="desktop-slide__collection">
+        {% assign collection_1 = collections['branded-pants'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
     </div>
   
     <div class="desktop-slide desktop__fade">
@@ -15,11 +45,10 @@
     <div class="desktop-slide desktop__fade">
       <div class="text">Desktop 3</div>
     </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="desktop-prev" onclick="desktopPlusSlides(-1)">&#10094;</a>
-    <a class="desktop-next" onclick="desktopPlusSlides(1)">&#10095;</a>
+
+    <div class="desktop-arrows desktop-next" onclick="desktopPlusSlides(1)">.</div>      
   </div>
+
 </div>
 
 <script>
@@ -44,6 +73,6 @@
     for (i = 0; i < desktopSlides.length; i++) {
       desktopSlides[i].style.display = "none";
     }
-    desktopSlides[desktopSlideIndex-1].style.display = "block";
+    desktopSlides[desktopSlideIndex-1].style.display = "flex";
   }
 </script>

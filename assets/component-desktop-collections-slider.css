@@ -1,14 +1,12 @@
 .desktop-collections-slider {
-  background-color: cornflowerblue;
   box-shadow: 0 1px 2px -2px black;
   position: relative;
-  height: 150px;
   z-index: 0;
 }
 
 /* Slideshow container */
 .desktop-collections-slider > .desktop__container {
-  max-width: 1000px;
+  max-width: 95%;
   position: relative;
   margin: auto;
 }
@@ -16,37 +14,72 @@
 /* Hide the images by default */
 .desktop-slide {
   display: none;
+  justify-content: center;
+}
+
+.desktop-slide > .desktop-slide__collection {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 33%;
+}
+
+.desktop-slide > .desktop-slide__collection:nth-child(2) {
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+}
+
+.desktop-slide > .desktop-slide__collection > .desktop-slide__collection-text {
+  margin-left: 5%;
+}
+
+.desktop-slide > .desktop-slide__collection > .desktop-slide__collection-text > h3 {
+  font-size: 26px;
+  color: #a1a1a1;
+  margin-top: 5px;
+  max-width: 100px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.desktop-slide > .desktop-slide__collection > .desktop-slide__collection-text > a > button {
+  background-color: #3cc395;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "BebasNeue";
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 5px 15px;
 }
 
 /* Next & previous buttons */
-.desktop-prev, .desktop-next {
+.desktop-arrows {
+  width: 60px;
+  height: 60px;
+  border-color: #e4e4e4;
+  color: #e4e4e4;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin-top: -31px;
+}
+
+.desktop-prev {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(45deg);
+  left: 0;
 }
 
 /* Position the "next button" to the right */
 .desktop-next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.desktop-prev:hover, .desktop-next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.active, .dot:hover {
-  background-color: #717171;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(-135deg);
+  right: 20px;
 }
 
 /* Fading animation */
