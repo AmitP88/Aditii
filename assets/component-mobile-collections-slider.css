@@ -1,8 +1,9 @@
 .mobile-collections-slider {
-  background-color: purple;
   box-shadow: 0 1px 2px -2px black;
   position: relative;
-  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 0;
 }
 
@@ -18,26 +19,53 @@
   display: none;
 }
 
+.mobile-slide > .mobile-slide__collection {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.mobile-slide > .mobile-slide__collection > .mobile-slide__collection-text > h3 {
+  font-size: 26px;
+  color: #a1a1a1;
+  margin-top: 5px;
+}
+
+.mobile-slide > .mobile-slide__collection > .mobile-slide__collection-text > a > button {
+  background-color: #3cc395;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "BebasNeue";
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+
 /* Next & previous buttons */
-.mobile-prev, .mobile-next {
-  cursor: pointer;
+.mobile-arrows {
+  width: 60px;
+  height: 60px;
+  border-color: #e4e4e4;
+  color: #e4e4e4;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin: 0 15px;
+  margin-top: -31px;
+}
+
+.mobile-prev {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(45deg);
+  left: 0;
 }
 
 /* Position the "next button" to the right */
 .mobile-next {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(-135deg);
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -58,4 +86,30 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+@media only screen and (min-width: 375px) {
+  .mobile-arrows {
+    margin: 0 5%;
+    margin-top: -31px;    
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .mobile-slide > .mobile-slide__collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+  }
+
+  .mobile-slide > .mobile-slide__collection > .mobile-slide__collection-text {
+    margin-left: 20px;
+  }
+
+  .mobile-slide > .mobile-slide__collection > .mobile-slide__collection-text > h3 {
+    max-width: 100px;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
 }

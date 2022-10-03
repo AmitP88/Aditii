@@ -2,24 +2,47 @@
 
 <div class="mobile-collections-slider">
   <div class="mobile__container">
-
-    <!-- Full-width images with number and caption text -->
     <div class="mobile-slide mobile__fade">
-      <div class="text">Mobile 1</div>
+      <div class="mobile-slide__collection">
+        {% assign collection_1 = collections['branded-shoes'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="mobile-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
     </div>
   
     <div class="mobile-slide mobile__fade">
-      <div class="text">Mobile 2</div>
+      <div class="mobile-slide__collection">
+        {% assign collection_1 = collections['branded-tshirts'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="mobile-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
     </div>
   
     <div class="mobile-slide mobile__fade">
-      <div class="text">Mobile 3</div>
+      <div class="mobile-slide__collection">
+        {% assign collection_1 = collections['branded-pants'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="mobile-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
     </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="mobile-prev" onclick="MobilePlusSlides(-1)">&#10094;</a>
-    <a class="mobile-next" onclick="MobilePlusSlides(1)">&#10095;</a>
   </div>
+  <a class="mobile-arrows mobile-prev" onclick="MobilePlusSlides(-1)">.</a>
+  <a class="mobile-arrows mobile-next" onclick="MobilePlusSlides(1)">.</a>  
 </div>
 
 <script>

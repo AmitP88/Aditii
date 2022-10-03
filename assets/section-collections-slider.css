@@ -1,8 +1,7 @@
 .collections-slider {
-  background-color: purple;
+  background-color: white;
   box-shadow: 0 1px 2px -2px black;
   position: relative;
-  height: 150px;
   z-index: 0;
 }
 
