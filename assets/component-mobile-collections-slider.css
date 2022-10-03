@@ -47,6 +47,7 @@
   height: 60px;
   border-color: #e4e4e4;
   color: #e4e4e4;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   margin: 0 15px;
@@ -66,15 +67,6 @@
   border-left: 1px solid;
   transform: rotate(-135deg);
   right: 0;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.mobile-prev:hover, .mobile-next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.active, .dot:hover {
-  background-color: #717171;
 }
 
 /* Fading animation */
