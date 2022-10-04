@@ -16,22 +16,22 @@
       </div>
 
       <div class="desktop-slide__collection">
-        {% assign collection_1 = collections['branded-tshirts'] %}
-        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        {% assign collection_2 = collections['branded-tshirts'] %}
+        <img src="{{ collection_2.featured_image | img_url: 'master' }}" alt="collection_1 image">
         <div class="desktop-slide__collection-text">
-          <h3>{{ collection_1.title }}</h3>
-          <a href="{{ collection_1.url }}">
+          <h3>{{ collection_2.title }}</h3>
+          <a href="{{ collection_2.url }}">
             <button>Shop</button>
           </a>
         </div>
       </div>
 
       <div class="desktop-slide__collection">
-        {% assign collection_1 = collections['branded-pants'] %}
-        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        {% assign collection_3 = collections['branded-pants'] %}
+        <img src="{{ collection_3.featured_image | img_url: 'master' }}" alt="collection_1 image">
         <div class="desktop-slide__collection-text">
-          <h3>{{ collection_1.title }}</h3>
-          <a href="{{ collection_1.url }}">
+          <h3>{{ collection_3.title }}</h3>
+          <a href="{{ collection_3.url }}">
             <button>Shop</button>
           </a>
         </div>
@@ -39,13 +39,39 @@
     </div>
   
     <div class="desktop-slide desktop__fade">
-      <div class="text">Desktop 2</div>
-    </div>
-  
-    <div class="desktop-slide desktop__fade">
-      <div class="text">Desktop 3</div>
-    </div>
+      <div class="desktop-slide__collection">
+        {% assign collection_4 = collections['womens-accessories'] %}
+        <img src="{{ collection_4.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_4.title }}</h3>
+          <a href="{{ collection_4.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
 
+      <div class="desktop-slide__collection">
+        {% assign collection_5 = collections['mens-accessories'] %}
+        <img src="{{ collection_5.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_5.title }}</h3>
+          <a href="{{ collection_5.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="desktop-slide__collection">
+        {% assign collection_6 = collections['plain-tees'] %}
+        <img src="{{ collection_6.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="desktop-slide__collection-text">
+          <h3>{{ collection_6.title }}</h3>
+          <a href="{{ collection_6.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="desktop-arrows desktop-next" onclick="desktopPlusSlides(1)">.</div>      
   </div>
 
