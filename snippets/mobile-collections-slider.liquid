@@ -2,44 +2,19 @@
 
 <div class="mobile-collections-slider">
   <div class="mobile__container">
-    <div class="mobile-slide mobile__fade">
-      <div class="mobile-slide__collection">
-        {% assign collection_1 = collections['branded-shoes'] %}
-        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
-        <div class="mobile-slide__collection-text">
-          <h3>{{ collection_1.title }}</h3>
-          <a href="{{ collection_1.url }}">
-            <button>Shop</button>
-          </a>
+    {% for collection in collections %}
+      <div class="mobile-slide mobile__fade">
+        <div class="mobile-slide__collection">
+          <img src="{{ collection.featured_image | img_url: 'master' }}" alt="collection image">
+          <div class="mobile-slide__collection-text">
+            <h3>{{ collection.title }}</h3>
+            <a href="{{ collection.url }}">
+              <button>Shop</button>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="mobile-slide mobile__fade">
-      <div class="mobile-slide__collection">
-        {% assign collection_1 = collections['branded-tshirts'] %}
-        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
-        <div class="mobile-slide__collection-text">
-          <h3>{{ collection_1.title }}</h3>
-          <a href="{{ collection_1.url }}">
-            <button>Shop</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="mobile-slide mobile__fade">
-      <div class="mobile-slide__collection">
-        {% assign collection_1 = collections['branded-pants'] %}
-        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
-        <div class="mobile-slide__collection-text">
-          <h3>{{ collection_1.title }}</h3>
-          <a href="{{ collection_1.url }}">
-            <button>Shop</button>
-          </a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <div class="mobile-arrows mobile-prev" onclick="MobilePlusSlides(-1)">.</div>
   <div class="mobile-arrows mobile-next" onclick="MobilePlusSlides(1)">.</div>  
