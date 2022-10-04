@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1440px){
   .collections-slider > .collections-slider__mobile {
     display: none;
   }
