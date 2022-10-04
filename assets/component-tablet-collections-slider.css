@@ -1,0 +1,95 @@
+.tablet-collections-slider {
+  box-shadow: 0 1px 2px -2px black;
+  position: relative;
+  z-index: 0;
+}
+
+/* Slideshow container */
+.tablet-collections-slider > .tablet__container {
+  max-width: 95%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.tablet-slide {
+  display: none;
+  justify-content: center;
+}
+
+.tablet-slide > .tablet-slide__collection {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 33%;
+}
+
+.tablet-slide > .tablet-slide__collection:nth-child(2) {
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+}
+
+.tablet-slide > .tablet-slide__collection > .tablet-slide__collection-text {
+  margin-left: 5%;
+}
+
+.tablet-slide > .tablet-slide__collection > .tablet-slide__collection-text > h3 {
+  font-size: 26px;
+  color: #a1a1a1;
+  margin-top: 5px;
+  max-width: 100px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.tablet-slide > .tablet-slide__collection > .tablet-slide__collection-text > a > button {
+  background-color: #3cc395;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "BebasNeue";
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+
+/* Next & previous buttons */
+.tablet-arrows {
+  width: 60px;
+  height: 60px;
+  border-color: #e4e4e4;
+  color: #e4e4e4;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+}
+
+.tablet-prev {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(45deg);
+  left: 0;
+  margin-left: 1.5%;
+}
+
+/* Position the "next button" to the right */
+.tablet-next {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(-135deg);
+  right: 20px;
+}
+
+/* Fading animation */
+.tablet__fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

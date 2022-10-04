@@ -1,0 +1,67 @@
+{{ 'component-tablet-collections-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="tablet-collections-slider">
+  <div class="tablet__container">
+    <div class="tablet-arrows tablet-prev" onclick="tabletPlusSlides(-1)">.</div>    
+    <div class="tablet-slide tablet__fade">
+      <div class="tablet-slide__collection">
+        {% assign collection_1 = collections['branded-shoes'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="tablet-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="tablet-slide__collection">
+        {% assign collection_1 = collections['branded-tshirts'] %}
+        <img src="{{ collection_1.featured_image | img_url: 'master' }}" alt="collection_1 image">
+        <div class="tablet-slide__collection-text">
+          <h3>{{ collection_1.title }}</h3>
+          <a href="{{ collection_1.url }}">
+            <button>Shop</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="tablet-slide tablet__fade">
+      <div class="text">tablet 2</div>
+    </div>
+  
+    <div class="tablet-slide tablet__fade">
+      <div class="text">tablet 3</div>
+    </div>
+
+    <div class="tablet-arrows tablet-next" onclick="tabletPlusSlides(1)">.</div>      
+  </div>
+
+</div>
+
+<script>
+  let tabletSlideIndex = 1;
+  tabletShowSlides(tabletSlideIndex);
+
+  // Next/previous controls
+  function tabletPlusSlides(n) {
+    tabletShowSlides(tabletSlideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function tabletCurrentSlide(n) {
+    tabletShowSlides(tabletSlideIndex = n);
+  }
+
+  function tabletShowSlides(n) {
+    let i;
+    let tabletSlides = document.getElementsByClassName("tablet-slide");
+    if (n > tabletSlides.length) {tabletSlideIndex = 1}
+    if (n < 1) {tabletSlideIndex = tabletSlides.length}
+    for (i = 0; i < tabletSlides.length; i++) {
+      tabletSlides[i].style.display = "none";
+    }
+    tabletSlides[tabletSlideIndex-1].style.display = "flex";
+  }
+</script>
