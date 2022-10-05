@@ -2,8 +2,16 @@
   display: block;
 }
 
+.product-slideshow > .desktop-product-slideshow {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .product-slideshow > .mobile-product-slideshow {
     display: none;
+  }
+
+  .product-slideshow > .desktop-product-slideshow {
+    display: block;
   }
 }

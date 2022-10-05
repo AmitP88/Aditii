@@ -33,42 +33,42 @@
   <br>
 
   <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="mobileDot" onclick="currentMobileSlide(1)"></span>
+    <span class="mobileDot" onclick="currentMobileSlide(2)"></span>
+    <span class="mobileDot" onclick="currentMobileSlide(3)"></span>
+    <span class="mobileDot" onclick="currentMobileSlide(4)"></span>
+    <span class="mobileDot" onclick="currentMobileSlide(5)"></span>
   </div>
 </div>
 
 <script>
-  let slideIndex = 4;
-  showSlides(slideIndex);
+  let mobileSlideIndex = 4;
+  showMobileSlides(mobileSlideIndex);
 
   // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  function mobilePlusSlides(n) {
+    showMobileSlides(mobileSlideIndex += n);
   }
 
   // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  function currentMobileSlide(n) {
+    showMobileSlides(MobileSlideIndex = n);
   }
 
-  function showSlides(n) {
+  function showMobileSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("mobile-product-slide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    let mobileSlides = document.getElementsByClassName("mobile-product-slide");
+    let mobileDots = document.getElementsByClassName("mobileDot");
+    if (n > mobileSlides.length) {mobileSlideIndex = 1}
+    if (n < 1) {mobileSlideIndex = mobileSlides.length}
+    for (i = 0; i < mobileSlides.length; i++) {
+      mobileSlides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < mobileDots.length; i++) {
+      mobileDots[i].className = mobileDots[i].className.replace(" active", "");
     }
-    
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+
+    mobileSlides[mobileSlideIndex-1].style.display = "block";
+    mobileDots[mobileSlideIndex-1].className += " active";
   }
 </script>
