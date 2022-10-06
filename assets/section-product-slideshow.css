@@ -6,6 +6,14 @@
   display: none;
 }
 
+.product-slideshow > .desktop-product-slideshow > .desktop-product-slideshow {
+  height: 100%;  
+}
+
+.product-slideshow > .desktop-product-slideshow > .desktop-product-slideshow > .desktop-product-slideshow__container {
+  height: 82%;
+}
+
 @media only screen and (min-width: 768px) {
   .product-slideshow > .mobile-product-slideshow {
     display: none;
@@ -13,5 +21,6 @@
 
   .product-slideshow > .desktop-product-slideshow {
     display: block;
+    height: 450px;
   }
 }
